@@ -1,0 +1,64 @@
+start: 
+    - show airport: WITH FADE 
+    - text: This colorful array of goods and the lively chatter in the air. This is the perfect place to pick up some souvenirs to remember my trip.
+    
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - text: This looks pretty nice
+    - show stranger: WITH FADE
+    - stranger says normal: May i help you?
+    - text: Hi how much is this?
+    - stranger says normal: Ah, this is one of our finest pieces. A true gem, For such a unique piece, it is priced at $35.
+    - text: Sure
+    - choice:
+        - "Pay with card":
+            - stranger says normal: I saw that the transaction did not go through. Maybe there may be an issue with the card reader. Maybe you could pay with cash instead. 
+            - choice:
+                - "Pay cash":
+                    - scene: BadEnding
+                - "Take time to check transaction":
+                    - scene: GoodEnding    
+
+        - "Pay with cash":
+            - choice:
+                - "Pay with a bigger note":
+                    - scene: BadEnding2
+                - "Pay exact":
+                    - scene: GoodEnding
+                    
+                    
+BadEnding:
+    - text: Heres $35?
+    - stranger says normal: Ok Thank you. Have a nice day
+    - hide stranger: WITH FADE
+    - show parkingLot: WITH FADE
+    - text: What the banking app says the transaction on the souvenir was successful.
+    - text: I just got ripped off!!
+    - text: Be wary of double payment always verify your transactions after failed payment when probed.
+    - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+    - text: The payments complete
+    - stranger says normal: Ok have a nice day
+    - hide stranger: WITH FADE
+    - show taxi: WITH FADE
+    - text: You obtained your souvenir and continued to explore the rest of Mexico
+    - show goodEnd: WITH FADE
+  
+                
+            
+BadEnding2:
+    - text: Heres $50?
+    - stranger says normal: Ok heres $15 Thank you. Have a nice day
+    - hide stranger: WITH FADE
+    - show skem: WITH FADE
+    - text: Heres $15
+    - stranger says normal: Excuse me this is a counterfeit note. I will be contacting the police
+    - text: What?
+    - text: Be wary of counterfeit money when paying with cash in rural marketplaces in Mexico and try to pay exact always.
+    - hide stranger: WITH FADE
+    - show badEnd: WITH FADE      
+    
+    
+    
