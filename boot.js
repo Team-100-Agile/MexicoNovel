@@ -20,9 +20,9 @@ const RenJSConfig =  {
     }
   },
   'fonts': '../assets/gui/fonts.css',
-  'guiConfig': '../story/GUI.yaml',
-  storyConfig: '../story/Config.yaml',
-  storySetup: '../story/Setup.yaml',
+  'guiConfig': 'GUI.yaml',
+  storyConfig: 'Config.yaml',
+  storySetup: 'Setup.yaml',
   'storyText': [
     '../story/Story.yaml'
   ],
