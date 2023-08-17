@@ -19,7 +19,7 @@ const RenJSConfig =  {
       }
     }
   },
-  'fonts': 'assets/gui/fonts.css',
+  'fonts': '../assets/gui/fonts.css',
   'guiConfig': 'story/GUI.yaml',
   storyConfig: 'story/Config.yaml',
   storySetup: 'story/Setup.yaml',
